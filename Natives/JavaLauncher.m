@@ -14,6 +14,7 @@
 #import "ios_uikit_bridge.h"
 #import "JavaLauncher.h"
 #import "LauncherPreferences.h"
+#import "MinecraftOptionUtils.h"
 #import "PLLogOutputView.h"
 #import "PLProfiles.h"
 
@@ -222,6 +223,9 @@ int launchJVM(NSString *username, id launchTarget, int width, int height, int mi
         return 1;
     }
 
+    // Setup options.txt
+    [MinecraftOptionUtils setupOptionsAtGameDir:gameDir];
+    
     int margc = -1;
     const char *margv[1000];
 

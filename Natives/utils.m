@@ -233,6 +233,8 @@ JITFlags DeviceGetJITFlags(BOOL refresh) {
         if (DeviceHasTXM()) {
             cachedFlags |= JIT_FLAG_HAS_TXM;
         }
+        
+        if (refresh) NSLog(@"[JIT] Using computed JIT flags: 0x%X", cachedFlags);
     });
     return cachedFlags;
 }
