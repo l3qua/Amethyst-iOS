@@ -11,6 +11,7 @@
 
 #include "utils.h"
 
+#import <mach/mach.h>
 #import "ios_uikit_bridge.h"
 #import "JavaLauncher.h"
 #import "LauncherPreferences.h"
